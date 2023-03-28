@@ -47,6 +47,7 @@
     "nodemon": "^2.0.22",
     "serve": "^14.2.0",
     "supertest": "^6.3.3",
+    "sweetalert": "^2.1.2",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "tsc": "^2.0.4",
