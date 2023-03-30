@@ -4,10 +4,10 @@ import express, { Request, Response} from "express";
 
 
 // Routers
-let appRouter = express.Router();
+let homeRouter = express.Router();
 
 // acceso a la ruta principal
-appRouter.route('/')
+homeRouter.route('/')
     .get( async (req: Request, res: Response) => {
     //    Obtain a Query Param
     let name: any = req?.query?.name;
@@ -19,3 +19,6 @@ appRouter.route('/')
     // Send to the client the reponse
     return res.send(response)
     })    
+
+
+   export default homeRouter;

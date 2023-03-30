@@ -3,18 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
-// cofiguration
+const routes_1 = __importDefault(require("./src/routes"));
+const logger_1 = require("./src/utils/logger");
 dotenv_1.default.config();
-// create my server
-const server = (0, express_1.default)();
-const port = process.env.PORT || 8000;
-// Routers
-server.get('/', (req, res) => {
-    res.send('Bienvenidos a la Iglesia de Dios de la Profecía RD');
+routes_1.default.listen(8000, () => {
+    (0, logger_1.logSuccess)('');
 });
-server.listen(port, () => {
-    console.log(`Servidor corriendo en el puero http://localhost/${port}`);
+routes_1.default.on('error', (error) => {
+    (0, logger_1.logError)(`Error: ${error}`);
 });
 //# sourceMappingURL=index.js.map
