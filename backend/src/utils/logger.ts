@@ -1,13 +1,16 @@
-import swal from 'sweetalert';
-
-export const logInfo = (message: string) => {
-    swal(`Good job!", "You clicked the button! ${message}`, "info");
+export const LogInfo = (message: string) => {
+    console.log(`Info: ${message}`);
 }
 
-export const logSuccess = (message: string) => {
-    swal(`Good job!", "You clicked the button! ${message}`, "success");
+export const LogSuccess = (message: string) => {
+    console.log(`Success: ${message}`);
 }
 
-export const logError = (message: string) => {
-    swal(`Error!", "You clicked the button! ${message}`, "error");
+export const LogWarning = (message: string) => {
+    console.log(`Warning: ${message}`);
 }
+
+export const LogError = (message: string) => {
+    console.log(`Error: ${message}`);
+}
+

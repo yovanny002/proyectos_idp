@@ -1,13 +1,18 @@
 import dotenv from 'dotenv';
 import server from './src/routes';
-import { logError, logSuccess } from './src/utils/logger';
+import { LogError, LogSuccess } from './src/utils/logger';
 
+
+// configurarion
 dotenv.config();
 
-server.listen(8000, () => {
-   logSuccess('')
+// port
+const port = process.env.PORT || 8000;
+
+server.listen(port, () => {
+   LogSuccess('Acceso exitoso')
 });
 
 server.on('error', (error) =>{
-    logError(`Error: ${error}`)
+    LogError(`Error: ${error}`)
 })

@@ -1,4 +1,4 @@
-import { logInfo } from "../utils/logger";
+import { LogInfo } from "../utils/logger";
 import { HomeController } from "../controllers/HomeController";
 import express, { Request, Response} from "express";
 
@@ -11,7 +11,7 @@ homeRouter.route('/')
     .get( async (req: Request, res: Response) => {
     //    Obtain a Query Param
     let name: any = req?.query?.name;
-    logInfo(`Query Param : ${name}`);
+    LogInfo(`Query Param : ${name}`);
     // Instace contoller to excute method
     const controller: HomeController = new HomeController();
     // Obtaine Response

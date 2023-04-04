@@ -14,6 +14,9 @@ const server:Express = express();
 
 server.use("/api", rootRoutes);
 
+// Stactic server
+server.use(express.static('public'));
+
 // TODO: Mongosse Conection
 
 // Cors
